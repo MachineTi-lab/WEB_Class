@@ -35,5 +35,5 @@ $ogrenciler = [
     @endforelse
 </ul>
 
-{{-- Sadece yönetici giriş yapmışsa "Yeni öğrenci ekle" butonu göster --}}
+{{-- Sadece yönetici giriş yapmışsa "Yeni öğrenci ekle" butonu gösteriyor bu arada --}}
 @includeWhen(Auth::check() && Auth::user()->role === 'admin', 'partials.yeni_ogrenci_ekle')
